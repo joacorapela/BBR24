@@ -3,4 +3,4 @@ all: application.pdf
 %.pdf: %.tex
 	pdflatex $<
 
-application.pdf: application.tex summary.tex coreTeam.tex
+application.pdf: application.tex summary.tex coreTeam.tex vision.tex approach.tex
