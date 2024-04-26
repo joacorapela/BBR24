@@ -6,4 +6,4 @@ all: application.pdf
 	pdflatex $<
 	pdflatex $<
 
-application.pdf: application.tex summary.tex coreTeam.tex vision.tex approach.tex
+application.pdf: application.tex summary.tex coreTeam.tex vision.tex approach.tex resourceFig.tex
