@@ -6,4 +6,6 @@
 *.out
 *.toc
 *.bak
+*.bbl
+*.blg
 .nfs*
