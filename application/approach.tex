@@ -1,18 +1,71 @@
+
 The proposed resource will distribute machine learning methods to process
-behavioural data and neural data, to perform simulations and to do data
-compression. The resource will also distribute data from our foraging
-experiments that will be used to demonstrate the functionality of all
-distributed methods and all method contributed by methods developers.
+behavioural data and neural data, to perform simulations and to compress
+behavioral and neural data. The resource will also distribute data from our
+foraging experiments that will be used to evaluate the functionality of all
+methods distributed by us and of those contributed by external developers.
 
 \subsubsection{Methods to process behavioral measurements}
 
 \paragraph{Linear dynamical systems models}
 
-\paragraph{Nonlinear dynamical systems models}
+Linear dynamical systems (LDS) models are used to characterize time-varying
+observations as a function of hidden (i.e., latent) state variables that vary
+over time. It assumes that both state and observed variables are Gaussian. The
+Kalman filter algorithm can be used to infer the probability distribution of
+latent variables given observations. More information about LDS can be found in
+\citep[][part I]{durbinAndKoopman12}.
+
+We have developed an implementation of LDS models and used it to infer denoised
+positions, velocities and accelerations of foraging mice from noisy and
+incomplete position measurements
+\href{https://joacorapela.github.io/lds\_python/auto\_examples/tracking/plotFilterFWGMouseTrajectoryManualVsLearnedParams.html}{offline}
+and
+\href{https://bonsai-rx.org/machinelearning/examples/examples/LinearDynamicalSystems/Kinematics/ForagingMouse/README.html}{online}
+with Bonsai.
+
+\paragraph{Nonlinear and non-Gaussian dynamical systems models}
+
+The LDS modes is very versatile and can be used to model a wide range of
+time-series observation. However, there are cases where this model does not
+apply and nonlinear and non-Gaussians extensions are needed, like extended
+Kalman filter, the unscented Kalman filter and the particle
+filter~\citep[][part II]{durbinAndKoopman12}.
+
+We have created the Poisson Linear Dyanmical System model (PLDS) to characterize count
+observations~\citep{mackeEtAl15} and distributed a Matlab
+implementation\footnote{\url{https://bitbucket.org/mackelab/pop\_spike\_dyn}}.
+This is an offline implementation, and we have not yet produced an online one.
+We have neither use PLDS to model behavioral or neural foraging data.
 
 \paragraph{Hidden Markov models}
 
-\paragraph{Linear regression models}
+The hidden Markov model (HMM) is a latent variable model similar to the LDS
+model, but in the HMM states are discrete~\citep[][Chapter 13]{bishop06}. It is
+used to assign discrete states to time series observations.
+
+We have developed an offline
+\href{https://github.com/joacorapela/hiddenMarkovModels}{implementation} of the
+HMM, used it to find repeatable states in epileptic seizures of human subjects,
+from unique Utah array recordings of their neural
+activity~\citep{rapelaAndTodorovToBeSubmitted}. We have also used the HMM to
+infer mouse foraging states from kinematic inferences from the LDS model. We
+are currently building an online implementation of the HMM.
+
+\paragraph{Generalized linear models}
+
+Generalized linear models (GLMs) are regression models for observations with diverse
+noise distributions (i.e., noise distributions in the exponential family). For
+example, they can be used to estimate a linear regression model with spike
+count as the observation variable.
+
+We have used a Gaussian GLM (i.e., a standard linear regression model) to
+study which of a large set of regressors (e.g., average speed or acceleration
+before entering a patch, amount of reward obtained in the previous visit to the
+current patch, amount of reward obtained in the previous visit to the other
+patch, weights). We have used a Bonsai implementation of online Bayesian linear
+regression to estimate receptive fields of cells in the primary visual
+cortex.
 
 \paragraph{Deep neural networks}
 
@@ -20,10 +73,29 @@ distributed methods and all method contributed by methods developers.
 
 \paragraph{Pose estimation methods}
 
-
 \subsubsection{Methods to process neural measurements}
+
+\paragraph{Latent variable models}
+
+\begin{description}
+
+    \item[Gaussian linear dynamical systems]
+
+    \item[Poisson linear dynamical systems]
+
+    \item[Gaussian process factor analysis]
+
+    \item[Sparse variational Gaussian process factor analysis]
+
+    \item[Latent factor analysis via dyamical systems (LFADS)]
+
+    \item[CEBRA]
+
+\end{description}
 
 \subsubsection{Methods to simulate foraging data}
 
 \subsubsection{Methods for compressing behavioral and neural measurements}
+
+\subsubsection{Data sharing}
 
