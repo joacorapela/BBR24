@@ -1,0 +1,18 @@
+\begin{tikzpicture}[
+        node distance=4cm and 1cm,
+        centralNode/.style={circle, draw=blue!60, fill=blue!5, very thick,
+        minimum size=7mm, align=center},
+        itemNode/.style={rectangle, draw=red!60, fill=red!5, very thick,
+        minimum size=5mm, align=center},
+    ]
+
+    \node[centralNode] (ldnExp)                                 {Long-Duration\\Naturalistic\\Experimentation};
+    \node[itemNode]    (dataRepo)           [left of=ldnExp]    {Data\\Repository};
+    \node[itemNode]    (methodsRepo)        [right of=ldnExp]   {ML Methods\\Repository};
+    \node[itemNode]    (competitionsRepo)   [below of=ldnExp]   {Data\\Competitions};
+
+    \draw[-] (ldnExp) -- (dataRepo);
+    \draw[-] (ldnExp) -- (methodsRepo);
+    \draw[-] (ldnExp) -- (competitionsRepo);
+
+\end{tikzpicture}
