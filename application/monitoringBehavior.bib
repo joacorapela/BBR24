@@ -41,3 +41,89 @@
   year={2021},
   publisher={Cold Spring Harbor Laboratory}
 }
+
+@ARTICLE{pereiraEtAl22,
+   title={SLEAP: A deep learning system for multi-animal pose tracking},
+   author={Pereira, Talmo D and
+      Tabris, Nathaniel and
+      Matsliah, Arie and
+      Turner, David M and
+      Li, Junyu and
+      Ravindranath, Shruthi and
+      Papadoyannis, Eleni S and
+      Normand, Edna and
+      Deutsch, David S and
+      Wang, Z. Yan and
+      McKenzie-Smith, Grace C and
+      Mitelut, Catalin C and
+      Castro, Marielisa Diez and
+      D'Uva, John and
+      Kislin, Mikhail and
+      Sanes, Dan H and
+      Kocher, Sarah D and
+      Samuel S-H and
+      Falkner, Annegret L and
+      Shaevitz, Joshua W and
+      Murthy, Mala},
+   journal={Nature Methods},
+   volume={19},
+   number={4},
+   year={2022},
+   publisher={Nature Publishing Group}
+   }
+}
+
+@article {bidermanEtAl23,
+	author = {Dan Biderman and Matthew R Whiteway and Cole Hurwitz and Nicholas Greenspan and Robert S Lee and Ankit Vishnubhotla and Richard Warren and Federico Pedraja and Dillon Noone and Michael Schartner and Julia M Huntenburg and Anup Khanal and Guido T Meijer and Jean-Paul Noel and Alejandro Pan-Vazquez and Karolina Z Socha and Anne E Urai and The International Brain Laboratory and John P Cunningham and Nathaniel Sawtell and Liam Paninski},
+	title = {Lightning Pose: improved animal pose estimation via semi-supervised learning, Bayesian ensembling, and cloud-native open-source tools},
+	elocation-id = {2023.04.28.538703},
+	year = {2023},
+	doi = {10.1101/2023.04.28.538703},
+	publisher = {Cold Spring Harbor Laboratory},
+	abstract = {Pose estimation algorithms are shedding new light on animal behavior and intelligence. Most existing models are only trained with labeled frames (supervised learning). Although effective in many cases, the fully supervised approach requires extensive image labeling, struggles to generalize to new videos, and produces noisy outputs that hinder downstream analyses. We address each of these limitations with a semi-supervised approach that leverages the spatiotemporal statistics of unlabeled videos in two different ways. First, we introduce unsupervised training objectives that penalize the network whenever its predictions violate smoothness of physical motion, multiple-view geometry, or depart from a low-dimensional subspace of plausible body configurations. Second, we design a new network architecture that predicts pose for a given frame using temporal context from surrounding unlabeled frames. These context frames help resolve brief occlusions or ambiguities between nearby and similar-looking body parts. The resulting pose estimation networks achieve better performance with fewer labels, generalize better to unseen videos, and provide smoother and more reliable pose trajectories for downstream analysis; for example, these improved pose trajectories exhibit stronger correlations with neural activity. We also propose a Bayesian post-processing approach based on deep ensembling and Kalman smoothing that further improves tracking accuracy and robustness. We release a deep learning package that adheres to industry best practices, supporting easy model development and accelerated training and prediction. Our package is accompanied by a cloud application that allows users to annotate data, train networks, and predict new videos at scale, directly from the browser.Competing Interest StatementThe authors have declared no competing interest.},
+	URL = {https://www.biorxiv.org/content/early/2023/04/28/2023.04.28.538703},
+	eprint = {https://www.biorxiv.org/content/early/2023/04/28/2023.04.28.538703.full.pdf},
+	journal = {bioRxiv}
+}
+
+@article{lauerEtAl22,
+  title={Multi-animal pose estimation, identification and tracking with DeepLabCut},
+  author={Lauer, Jessy and Zhou, Mu and Ye, Shaokai and Menegas, William and Schneider, Steffen and Nath, Tanmay and Rahman, Mohammed Mostafizur and Di Santo, Valentina and Soberanes, Daniel and Feng, Guoping and others},
+  journal={Nature Methods},
+  volume={19},
+  number={4},
+  pages={496--504},
+  year={2022},
+  publisher={Nature Publishing Group US New York}
+}
+
+@article {kaneEtAl20,
+article_type = {journal},
+title = {Real-time, low-latency closed-loop feedback using markerless posture tracking},
+author = {Kane, Gary A and Lopes, Gonçalo and Saunders, Jonny L and Mathis, Alexander and Mathis, Mackenzie W},
+editor = {Berman, Gordon J and Behrens, Timothy E and Berman, Gordon J and Branco, Tiago},
+volume = 9,
+year = 2020,
+month = {dec},
+pub_date = {2020-12-08},
+pages = {e61909},
+citation = {eLife 2020;9:e61909},
+doi = {10.7554/eLife.61909},
+url = {https://doi.org/10.7554/eLife.61909},
+abstract = {The ability to control a behavioral task or stimulate neural activity based on animal behavior in real-time is an important tool for experimental neuroscientists. Ideally, such tools are noninvasive, low-latency, and provide interfaces to trigger external hardware based on posture. Recent advances in pose estimation with deep learning allows researchers to train deep neural networks to accurately quantify a wide variety of animal behaviors. Here, we provide a new \texttt{DeepLabCut-Live!} package that achieves low-latency real-time pose estimation (within 15 ms, >100 FPS), with an additional forward-prediction module that achieves zero-latency feedback, and a dynamic-cropping mode that allows for higher inference speeds. We also provide three options for using this tool with ease: (1) a stand-alone GUI (called \texttt{DLC-Live! GUI}), and integration into (2) \texttt{Bonsai,} and (3) \texttt{AutoPilot}. Lastly, we benchmarked performance on a wide range of systems so that experimentalists can easily decide what hardware is required for their needs.},
+keywords = {pose-estimation, DeepLabCut, real-time tracking, any animal, low-latency},
+journal = {eLife},
+issn = {2050-084X},
+publisher = {eLife Sciences Publications, Ltd},
+}
+
+@article{schneiderEtAl23,
+  title={Learnable latent embeddings for joint behavioural and neural analysis},
+  author={Schneider, Steffen and Lee, Jin Hwa and Mathis, Mackenzie Weygandt},
+  journal={Nature},
+  volume={617},
+  number={7960},
+  pages={360--368},
+  year={2023},
+  publisher={Nature Publishing Group UK London}
+}
