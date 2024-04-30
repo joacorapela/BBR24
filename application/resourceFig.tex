@@ -7,12 +7,14 @@
     ]
 
     \node[centralNode] (ldnExp)                                 {Long-Duration\\Naturalistic\\Experimentation};
-    \node[itemNode]    (dataRepo)           [left of=ldnExp]    {Data\\Repository};
-    \node[itemNode]    (methodsRepo)        [right of=ldnExp]   {ML Methods\\Repository};
-    \node[itemNode]    (competitionsRepo)   [below of=ldnExp]   {Data\\Competitions};
+    \node[itemNode]    (dataRepo)           [above of=ldnExp]   {Data};
+    \node[itemNode]    (methodsRepo)        [left of=ldnExp]    {ML Methods};
+    \node[itemNode]    (competitionsRepo)   [right of=ldnExp]   {Competitions};
+    \node[itemNode]    (onlineSupport)      [below of=ldnExp]   {Online\\Support};
 
     \draw[-] (ldnExp) -- (dataRepo);
     \draw[-] (ldnExp) -- (methodsRepo);
     \draw[-] (ldnExp) -- (competitionsRepo);
+    \draw[-] (ldnExp) -- (onlineSupport);
 
 \end{tikzpicture}
