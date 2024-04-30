@@ -5,16 +5,13 @@
         itemNode/.style={rectangle, draw=red!60, fill=red!5, very thick,
         minimum size=5mm, align=center},
     ]
-
     \node[centralNode] (ldnExp)                                 {Long-Duration\\Naturalistic\\Experimentation};
     \node[itemNode]    (dataRepo)           [above of=ldnExp]   {Data};
     \node[itemNode]    (methodsRepo)        [left of=ldnExp]    {ML Methods};
     \node[itemNode]    (competitionsRepo)   [right of=ldnExp]   {Competitions};
     \node[itemNode]    (onlineSupport)      [below of=ldnExp]   {Online\\Support};
-
     \draw[-] (ldnExp) -- (dataRepo);
     \draw[-] (ldnExp) -- (methodsRepo);
     \draw[-] (ldnExp) -- (competitionsRepo);
     \draw[-] (ldnExp) -- (onlineSupport);
-
 \end{tikzpicture}
