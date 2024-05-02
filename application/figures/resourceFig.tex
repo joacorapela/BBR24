@@ -6,12 +6,22 @@
         minimum size=5mm, align=center},
     ]
     \node[centralNode] (ldnExp)                                 {Long-Duration\\Naturalistic\\Experimentation};
-    \node[itemNode]    (dataRepo)           [above of=ldnExp]   {Data};
-    \node[itemNode]    (methodsRepo)        [left of=ldnExp]    {ML Methods};
-    \node[itemNode]    (competitionsRepo)   [right of=ldnExp]   {Competitions};
-    \node[itemNode]    (onlineSupport)      [below of=ldnExp]   {Online\\Support};
-    \draw[-] (ldnExp) -- (dataRepo);
-    \draw[-] (ldnExp) -- (methodsRepo);
-    \draw[-] (ldnExp) -- (competitionsRepo);
+    \node[itemNode]    (data)           [above of= ldnExp]   {Data};
+    \node[itemNode]    (methods)        [below of= ldnExp]    {ML Methods};
+    \node[itemNode]    (competitions)    [right of= ldnExp]   {Competitions};
+    \node[itemNode]    (onlineSupport)  [left of= ldnExp]   {Online\\Support};
+    \node[itemNode]    (simulations)    [below left= 0.1in of methods]{Simulations};
+    \node[itemNode]    (expControl)     [below= 0.2in of methods]{Intelligent\\Experiment\\Control};
+    \node[itemNode]    (dataAnalysis)   [below right= 0.6in of methods]   {Data\\Analysis};
+    \node[itemNode]    (online)   [below left= 0.1in of dataAnalysis]   {Online};
+    \node[itemNode]    (offline)   [below right= 0.1in of dataAnalysis]   {Offline};
+    \draw[-] (ldnExp) -- (data);
+    \draw[-] (ldnExp) -- (methods);
+    \draw[-] (ldnExp) -- (competitions);
     \draw[-] (ldnExp) -- (onlineSupport);
+    \draw[-] (methods) -- (simulations);
+    \draw[-] (methods) -- (expControl);
+    \draw[-] (methods) -- (dataAnalysis);
+    \draw[-] (dataAnalysis) -- (online);
+    \draw[-] (dataAnalysis) -- (offline);
 \end{tikzpicture}
